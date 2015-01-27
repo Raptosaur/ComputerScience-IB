@@ -1,22 +1,22 @@
 package com.bookstore;
 
 import com.bookstore.debug.Log;
+import com.bookstore.gui.LoginGUI;
 
 public class Core {
 
-	public static boolean showingWindow;
-	
+	public static final String version = "v0.1";
+
 	public static void main(String[] args){
-		while(!LoggedInUserData.isLoggedIn){
-			if(!showingWindow){
-				showWindow();
-			}
+
+		if( args.length > 0 && args[0].equals("debug")) {
+			Log.debugEnabled = true;
+			Log.log("Debugging enabled.");
 		}
+
+		Log.logDebug("Initialising the login window.");
+		LoginGUI.showWindow();
+
 	}
-	
-	public static void showWindow(){
-		showingWindow = true;
-		Log.log("System login window is now being displayed.");
-	}
-	
+
 }
