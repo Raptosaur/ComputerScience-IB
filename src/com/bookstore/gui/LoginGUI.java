@@ -25,7 +25,7 @@ public class LoginGUI extends JFrame{
 
     private LoginGUI(){
         super("BookManager - " + Core.version);                 // Set the title of the frame
-        this.setSize(400, 300);                                 // Title of the frame
+        this.setSize(400, 300);                                 // Size of the frame
         this.setLocationRelativeTo(null);                       // Center of screen alignment
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    // Exit program when closed
         this.setResizable(false);                               // We don't want the login screen to be resizable
