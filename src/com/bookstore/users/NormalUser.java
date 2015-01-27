@@ -1,5 +1,5 @@
 package com.bookstore.users;
 
-public class NormalUser {
+public class NormalUser extends User{
 
 }

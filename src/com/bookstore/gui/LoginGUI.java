@@ -51,6 +51,11 @@ public class LoginGUI extends JFrame{
                     dispose();
                     Log.logDebug("Disposed LoginGUI - Successful login with details:");
                     Log.logDebug("Username: "+userField.getText()+" Password: "+passField.getText());
+                    MainGUI.showWindow();
+                }else{
+                    JOptionPane.showMessageDialog(display, "Incorrect username or Password", "Error", JOptionPane.WARNING_MESSAGE);
+                    Log.logDebug("Incorrect login with details:");
+                    Log.logDebug("Username: " + userField.getText() + " Password: " + passField.getText());
                 }
             }
         });

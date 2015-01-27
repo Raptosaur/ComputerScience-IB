@@ -1,7 +1,9 @@
 package com.bookstore;
 
+import com.bookstore.data.UserList;
 import com.bookstore.debug.Log;
 import com.bookstore.gui.LoginGUI;
+import com.bookstore.users.User;
 
 public class Core {
 
@@ -13,6 +15,8 @@ public class Core {
 			Log.debugEnabled = true;
 			Log.log("Debugging enabled.");
 		}
+
+		UserList.addUser(new User("Bill","password"));
 
 		Log.logDebug("Initialising the login window.");
 		LoginGUI.showWindow();
