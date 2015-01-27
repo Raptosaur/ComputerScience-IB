@@ -15,7 +15,7 @@ public class Login {
 		}else if (attemptUser.isPassword(password)){
 			LoggedInUserData.loggedInUser = attemptUser;
 			LoggedInUserData.isLoggedIn = true;
-			Log.logDebug("Login - Assigning loggedInUser as "+attemptUser.getName());
+			Log.logDebug("Login - Assigning loggedInUser as "+attemptUser.getUsername());
 			return true;
 		}else{
 			Log.logDebug("Login - Found user but incorrect password");
